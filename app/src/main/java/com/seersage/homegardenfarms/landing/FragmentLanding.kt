@@ -13,6 +13,7 @@ import com.seersage.homegardenfarms.databinding.FragmentLandingBinding
 
 class FragmentLanding : Fragment() {
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentLandingBinding>(inflater,
