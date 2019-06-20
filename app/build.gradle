@@ -29,6 +29,10 @@ android {
     }
 }
 
+repositories {
+    jcenter()
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -40,6 +44,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     // Apollo for GraphQL
-    implementation 'com.apollographql.apollo:apollo-runtime:0.3.2'
-    implementation "com.apollographql.apollo:apollo-android-support:0.3.2"
+    implementation 'com.apollographql.apollo:apollo-runtime:1.0.0'
 }
