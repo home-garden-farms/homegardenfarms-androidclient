@@ -45,4 +45,7 @@ dependencies {
 
     // Apollo for GraphQL
     implementation 'com.apollographql.apollo:apollo-runtime:1.0.0'
+
+    //Associated with GraphQL
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
 }
