@@ -1,4 +1,4 @@
-package com.seersage.homegardenfarms.landing
+package com.seersage.homegardenfarms.login
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -9,24 +9,24 @@ import android.view.ViewGroup
 
 import com.seersage.homegardenfarms.R
 
-class LandingFragment : Fragment() {
+class LoginFragment : Fragment() {
 
     companion object {
-        fun newInstance() = LandingFragment()
+        fun newInstance() = LoginFragment()
     }
 
-    private lateinit var viewModel: LandingViewModel
+    private lateinit var viewModel: LoginViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.landing_fragment, container, false)
+        return inflater.inflate(R.layout.login_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(LandingViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(LoginViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
