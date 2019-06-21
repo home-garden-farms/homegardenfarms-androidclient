@@ -1,4 +1,4 @@
-package com.seersage.homegardenfarms.networking;
+package com.seersage.homegardenfarms.network;
 
 import com.apollographql.apollo.ApolloClient;
 import okhttp3.OkHttpClient;
