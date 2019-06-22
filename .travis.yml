@@ -25,5 +25,11 @@ android:
 #  # Prepare pre-accepted licenses to not be promted at installation
 #  - mkdir -p "$ANDROID_HOME/licenses"
 #  - cp ./google-licenses/* "$ANDROID_HOME/licenses/"
+
+before_install:
+  - pwd
+  - ls -la
+  - chmod +x /.gradlew
+
 script:
   - ./gradlew build check
