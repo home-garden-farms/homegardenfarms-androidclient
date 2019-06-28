@@ -1,5 +1,9 @@
 package com.seersage.homegardenfarms
 
+import com.apollographql.apollo.api.Response
+import com.apollographql.apollo.sample.LoginMutation
+import com.seersage.homegardenfarms.network.GraphQLHelper
+import com.seersage.homegardenfarms.repository.Repository
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -9,9 +13,12 @@ import org.junit.Assert.*
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class ExampleUnitTest {
+class GraphQLTest {
+
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun loginTest(){
+        var response: Response<LoginMutation.Data>? = GraphQLHelper("http://srv.homegardenfarms.com:3000/graphql").login("e@f.com", "12345")
+
+        assertNotNull(response)
     }
 }
