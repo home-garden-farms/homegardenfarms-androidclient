@@ -22,12 +22,11 @@ class GraphQLHelper (baseURL:String){
         var callback = object: ApolloCall.Callback<LoginMutation.Data>(){
             var loginResponse: Response<LoginMutation.Data>? = null
             override fun onResponse(response: Response<LoginMutation.Data>) {
-                Log.d("Login", response.data()?.toString())
                 loginResponse = response
+
             }
 
             override fun onFailure(e: ApolloException) {
-                Log.e("Login", e.toString());
                 loginResponse = null
             }
         }
