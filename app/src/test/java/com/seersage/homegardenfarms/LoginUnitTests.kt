@@ -34,7 +34,8 @@ class GraphQLTest {
     @Test
     fun loginTest(){
         var loginResponse = runBlocking{
-            val job = launch{repository.login("e@f.com", "12345")}
+            //add email locally for tests
+            val job = launch{repository.login("", "12345")}
             job.cancelAndJoin()
         }
 
