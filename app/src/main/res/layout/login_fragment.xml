@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools">
-    <FrameLayout
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".login.LoginFragment">
 
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Hello"/>
+        <ImageView android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:background="@drawable/basket_lemon"
+                   android:scaleType="center"
+        />
 
-    </FrameLayout>
+
+        <EditText
+                style="@style/med_edit_text"
+                android:inputType="textEmailAddress"
+                android:hint="@string/email_hint"
+                android:id="@+id/username"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+                style="@style/med_edit_text"
+                android:inputType="textPassword"
+                android:hint="@string/password_hint"
+                android:id="@+id/password"
+                app:layout_constraintTop_toBottomOf="@+id/username"
+                app:layout_constraintStart_toStartOf="@+id/username"
+                app:layout_constraintEnd_toEndOf="@+id/username"/>
+
+        <Button
+                style="@style/med_edit_text"
+                android:text="@string/login"
+                android:id="@+id/login_button"
+                app:layout_constraintTop_toBottomOf="@+id/password"
+                app:layout_constraintStart_toStartOf="@+id/password"
+                app:layout_constraintEnd_toEndOf="@+id/password"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
+
+        <!--android:background="@drawable/basket_berries"-->
+        <!---->

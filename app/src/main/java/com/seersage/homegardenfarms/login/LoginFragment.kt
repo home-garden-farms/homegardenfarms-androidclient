@@ -10,6 +10,8 @@ import androidx.databinding.DataBindingUtil
 
 import com.seersage.homegardenfarms.R
 import com.seersage.homegardenfarms.databinding.LoginFragmentBinding
+import com.seersage.homegardenfarms.repository.login
+
 
 class LoginFragment : Fragment() {
 
@@ -33,6 +35,11 @@ class LoginFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(LoginViewModel::class.java)
         // TODO: Use the ViewModel
+
+
     }
 
+    fun login(v: View){
+        login("e@f", "12345")
+    }
 }
