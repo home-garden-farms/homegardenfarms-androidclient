@@ -54,5 +54,9 @@ dependencies {
     implementation 'com.apollographql.apollo:apollo-runtime:1.0.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.0.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.0.0'
+
+    //okhttp3
     implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'//not recently supported, may have to fork and fix
+
 }

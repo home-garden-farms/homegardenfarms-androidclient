@@ -18,6 +18,8 @@ public class ResponseInterceptor implements Interceptor {
         Request request = chain.request();
 
         Response response = chain.proceed(request);
+        Log.d("Login", "response headers: " + response.headers().toString());
+
         if (!response.headers("Set-Cookie").isEmpty()) {
             HashSet<String> cookies = new HashSet<>();
             for (String header : response.headers("Set-Cookie")) {
@@ -28,6 +30,8 @@ public class ResponseInterceptor implements Interceptor {
                 Log.d("Login", "cookie info: " + cookie);
             }
 
+        }else{
+            Log.d("Login", "No cookies sent");
         }
 
         return response;
